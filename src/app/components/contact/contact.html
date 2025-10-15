@@ -1,0 +1,127 @@
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-content">
+      <div class="contact-info">
+        <div class="section-header" style="text-align: left; margin-bottom: var(--spacing-xl);">
+          <span class="section-subtitle">CONTÁCTENOS</span>
+          <h2>Hablemos sobre su proyecto</h2>
+          <p>
+            Nuestro equipo de consultores está listo para ayudarle a alcanzar 
+            sus objetivos empresariales. Solicite una consultoría gratuita hoy mismo.
+          </p>
+        </div>
+        
+        <div class="info-items">
+          <div class="info-item">
+            <div class="icon">📍</div>
+            <div class="details">
+              <h4>Oficinas Centrales</h4>
+              <p>Av. Reforma 2654, CDMX<br>México</p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <div class="icon">📧</div>
+            <div class="details">
+              <h4>Correo Electrónico</h4>
+              <p>contacto&#64;corporacion.com.mx</p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <div class="icon">📱</div>
+            <div class="details">
+              <h4>Teléfono</h4>
+              <p>+52 (55) 1234-5678</p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <div class="icon">🕐</div>
+            <div class="details">
+              <h4>Horario de Atención</h4>
+              <p>Lunes a Viernes: 9:00 - 18:00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contact-form">
+        <form (ngSubmit)="onSubmit()">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nombre completo *</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name"
+                [(ngModel)]="formData.name"
+                placeholder="Su nombre" 
+                required
+              />
+            </div>
+            
+            <div class="form-group">
+              <label for="company">Empresa *</label>
+              <input 
+                type="text" 
+                id="company" 
+                name="company"
+                [(ngModel)]="formData.company"
+                placeholder="Nombre de la empresa" 
+                required
+              />
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Correo electrónico *</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email"
+                [(ngModel)]="formData.email"
+                placeholder="correo&#64;empresa.com" 
+                required
+              />
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Teléfono *</label>
+              <input 
+                type="tel" 
+                id="phone" 
+                name="phone"
+                [(ngModel)]="formData.phone"
+                placeholder="+52 (55) 1234-5678" 
+                required
+              />
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">¿En qué podemos ayudarle? *</label>
+            <textarea 
+              id="message" 
+              name="message"
+              [(ngModel)]="formData.message"
+              placeholder="Cuéntenos sobre su proyecto o necesidades empresariales..." 
+              rows="5"
+              required
+            ></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-large submit-btn">
+            Solicitar consultoría gratuita
+          </button>
+          
+          <p class="form-note">
+            * Campos obligatorios. Sus datos están protegidos y serán tratados con absoluta confidencialidad.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+

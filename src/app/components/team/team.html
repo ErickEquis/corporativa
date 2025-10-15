@@ -1,0 +1,30 @@
+<section class="team" id="team">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-subtitle">NUESTRO EQUIPO</span>
+      <h2>Liderazgo experimentado y comprometido</h2>
+      <p>
+        Contamos con un equipo directivo de alto nivel con décadas de experiencia 
+        en consultoría empresarial y gestión estratégica.
+      </p>
+    </div>
+    
+    <div class="team-grid">
+      @for (member of teamMembers; track member.id) {
+        <div class="team-card">
+          <div class="member-avatar" [style.background-color]="member.color">
+            {{ member.initials }}
+          </div>
+          <h3>{{ member.name }}</h3>
+          <p class="member-position">{{ member.position }}</p>
+          <div class="member-links">
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+            <span>•</span>
+            <a href="#" aria-label="Email">Email</a>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+

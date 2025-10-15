@@ -1,0 +1,67 @@
+<header class="header" [class.scrolled]="isScrolled()">
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-content">
+        <div class="logo">
+          <a href="#home" (click)="scrollToSection($event, 'home')">
+            <span class="logo-icon">🏢</span>
+            <span class="logo-text">CORPORACIÓN</span>
+          </a>
+        </div>
+        
+        <button class="mobile-menu-btn" (click)="toggleMenu()" [class.active]="isMenuOpen()" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <ul class="nav-menu" [class.active]="isMenuOpen()">
+          <li><a href="#about" (click)="scrollToSection($event, 'about')">Nosotros</a></li>
+          <li><a href="#services" (click)="scrollToSection($event, 'services')">Servicios</a></li>
+          <li><a href="#team" (click)="scrollToSection($event, 'team')">Equipo</a></li>
+          <li><a href="#partners" (click)="scrollToSection($event, 'partners')">Aliados</a></li>
+          <li><a href="#contact" (click)="scrollToSection($event, 'contact')">Contacto</a></li>
+          <li class="cta-nav">
+            <a href="#contact" class="btn btn-primary" (click)="scrollToSection($event, 'contact')">Solicitar consultoría</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <span class="hero-badge">Excelencia desde 1990</span>
+          <h1 class="hero-title">
+            Impulsando el éxito empresarial a través de la <span class="text-highlight">innovación estratégica</span>
+          </h1>
+          <p class="hero-description">
+            Más de 30 años de experiencia transformando organizaciones con soluciones 
+            empresariales de clase mundial. Su socio estratégico para el crecimiento sostenible.
+          </p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary btn-large" (click)="scrollToSection($event, 'contact')">
+              Agendar reunión
+            </a>
+            <a href="#about" class="btn btn-secondary btn-large" (click)="scrollToSection($event, 'about')">
+              Conocer más
+            </a>
+          </div>
+        </div>
+        
+        <div class="hero-image">
+          <div class="image-card">
+            <div class="card-content">
+              <div class="icon-large">📊</div>
+              <h3>Resultados Comprobados</h3>
+              <p>Líderes en el sector con 1000+ proyectos exitosos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+

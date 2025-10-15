@@ -1,0 +1,22 @@
+<section class="partners" id="partners">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-subtitle">ALIANZAS ESTRATÉGICAS</span>
+      <h2>Confianza de las organizaciones líderes</h2>
+      <p>
+        Trabajamos con las empresas más importantes de diversos sectores, 
+        construyendo relaciones de largo plazo basadas en resultados.
+      </p>
+    </div>
+    
+    <div class="partners-grid">
+      @for (partner of partners; track partner.name) {
+        <div class="partner-card">
+          <div class="partner-icon">{{ partner.icon }}</div>
+          <p>{{ partner.name }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+

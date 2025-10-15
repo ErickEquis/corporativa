@@ -1,0 +1,26 @@
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-subtitle">NUESTROS SERVICIOS</span>
+      <h2>Soluciones integrales para cada necesidad</h2>
+      <p>
+        Ofrecemos un portafolio completo de servicios diseñados para impulsar 
+        el éxito de su organización en un entorno empresarial competitivo.
+      </p>
+    </div>
+    
+    <div class="services-grid">
+      @for (service of services; track service.id) {
+        <div class="service-card">
+          <div class="service-icon">{{ service.icon }}</div>
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.description }}</p>
+          <a href="#contact" class="service-link">
+            Más información →
+          </a>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
